@@ -28,7 +28,6 @@ public class PlayListService {
     public List<PlayList> getPlayListsByMusic(String id){
         List<PlayList> play = new ArrayList<>();
         var music = musicRepository.findById(id);
-        System.out.println(playListRepository.findByMusic(music.get().getPlaylistIds()).size());
         playListRepository.findByMusic(music.get().getPlaylistIds()).forEach(musics -> play.add(musics));
         return play;
     }

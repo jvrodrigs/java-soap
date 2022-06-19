@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Endpoint
-public class UserEndpoint {
+public class AllEndpoint {
 
     private static final String NAMESPACE_URI = "http://localhost/teste";
 
@@ -130,11 +130,4 @@ public class UserEndpoint {
         response.getMusic().addAll(musics);
         return response;
     }
-//    @PayloadRoot(namespace = "http://localhost/teste", localPart = "getUserRequest")
-//    @ResponsePayload
-//    public GetUserResponse getUserResponse(@RequestPayload GetUserRequest request){
-//        GetUserResponse response = new GetUserResponse();
-//        response.setUser(userService.getUsers(request.getNome()));
-//        return response;
-//    }
 }
