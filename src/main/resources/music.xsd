@@ -1,0 +1,23 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://localhost/teste"
+           targetNamespace="http://localhost/teste"
+           elementFormDefault="qualified">
+    <xs:complexType name="music">
+        <xs:sequence>
+            <xs:element name="id" type="xs:string"/>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="artist" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="getAllMusicsRequest">
+        <xs:complexType/>
+    </xs:element>
+    <xs:element name="getAllMusicsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="music" type="tns:music" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
