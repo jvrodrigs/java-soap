@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="user" type="{http://localhost/teste}user"/>
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,36 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "user"
+    "id"
 })
-@XmlRootElement(name = "getUserResponse")
-public class GetUserResponse {
+@XmlRootElement(name = "getMusicsRequest")
+public class GetMusicsRequest {
 
     @XmlElement(required = true)
-    protected User user;
+    protected String id;
 
     /**
-     * Obtém o valor da propriedade user.
+     * Obtém o valor da propriedade id.
      * 
      * @return
      *     possible object is
-     *     {@link User }
+     *     {@link String }
      *     
      */
-    public User getUser() {
-        return user;
+    public String getId() {
+        return id;
     }
 
     /**
-     * Define o valor da propriedade user.
+     * Define o valor da propriedade id.
      * 
      * @param value
      *     allowed object is
-     *     {@link User }
+     *     {@link String }
      *     
      */
-    public void setUser(User value) {
-        this.user = value;
+    public void setId(String value) {
+        this.id = value;
     }
 
 }

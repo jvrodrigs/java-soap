@@ -14,7 +14,6 @@ public class MusicService {
     @Autowired
     private MusicRepository musicRepository;
 
-
     public List<Music> getAllMusics(){
         List<Music> music = new ArrayList<>();
         musicRepository.findAll().forEach(m -> music.add(m));

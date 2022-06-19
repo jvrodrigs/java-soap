@@ -1,7 +1,9 @@
 package naturalis.erp.Endpoint;
 
 import localhost.teste.*;
+import naturalis.erp.Model.PlayList;
 import naturalis.erp.Service.MusicService;
+import naturalis.erp.Service.PlayListService;
 import naturalis.erp.Service.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,9 @@ public class UserEndpoint {
 
     @Autowired
     private MusicService musicService;
+
+    @Autowired
+    private PlayListService playListService;
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllUsersRequest")
     @ResponsePayload
@@ -55,6 +60,40 @@ public class UserEndpoint {
         });
 
         response.getMusic().addAll(musicList);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getPlayRequest")
+    @ResponsePayload
+    public GetPlaysResponse getAllPlayResponse(@RequestPayload GetPlayRequest request){
+        GetPlaysResponse response = new GetPlaysResponse();
+        List<Playlist> play = new ArrayList<>();
+        List<PlayList> p = playListService.getPlayListByUserId(request.getUserId());
+
+        p.forEach(l -> {
+            Playlist pp = new Playlist();
+            BeanUtils.copyProperties(l, pp);
+            play.add(pp);
+        });
+
+        response.getPlaylist().addAll(play);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllPlayRequest")
+    @ResponsePayload
+    public GetAllPlayResponse getAllPlayResponse(@RequestPayload GetAllPlayRequest request){
+        GetAllPlayResponse response = new GetAllPlayResponse();
+        List<Playlist> playlists = new ArrayList<>();
+        List<PlayList> p = playListService.getAllPlayList();
+
+        p.forEach(l -> {
+            Playlist pp = new Playlist();
+            BeanUtils.copyProperties(l, pp);
+            playlists.add(pp);
+        });
+
+        response.getPlaylist().addAll(playlists);
         return response;
     }
 

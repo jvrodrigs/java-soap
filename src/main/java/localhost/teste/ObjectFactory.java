@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2022.06.19 às 12:17:23 AM GFT 
+// Gerado em: 2022.06.19 às 02:20:33 AM GFT 
 //
 
 
@@ -34,6 +34,30 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link GetMusicsRequest }
+     * 
+     */
+    public GetMusicsRequest createGetMusicsRequest() {
+        return new GetMusicsRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetPlayRequest }
+     * 
+     */
+    public GetPlayRequest createGetPlayRequest() {
+        return new GetPlayRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPlayRequest }
+     * 
+     */
+    public GetAllPlayRequest createGetAllPlayRequest() {
+        return new GetAllPlayRequest();
     }
 
     /**
@@ -69,11 +93,51 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetAllPlayResponse }
+     * 
+     */
+    public GetAllPlayResponse createGetAllPlayResponse() {
+        return new GetAllPlayResponse();
+    }
+
+    /**
+     * Create an instance of {@link Playlist }
+     * 
+     */
+    public Playlist createPlaylist() {
+        return new Playlist();
+    }
+
+    /**
      * Create an instance of {@link GetUserRequest }
      * 
      */
     public GetUserRequest createGetUserRequest() {
         return new GetUserRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetPlaysResponse }
+     * 
+     */
+    public GetPlaysResponse createGetPlaysResponse() {
+        return new GetPlaysResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetMusicsResponse }
+     * 
+     */
+    public GetMusicsResponse createGetMusicsResponse() {
+        return new GetMusicsResponse();
+    }
+
+    /**
+     * Create an instance of {@link Music }
+     * 
+     */
+    public Music createMusic() {
+        return new Music();
     }
 
     /**
@@ -90,14 +154,6 @@ public class ObjectFactory {
      */
     public GetAllMusicsResponse createGetAllMusicsResponse() {
         return new GetAllMusicsResponse();
-    }
-
-    /**
-     * Create an instance of {@link Music }
-     * 
-     */
-    public Music createMusic() {
-        return new Music();
     }
 
 }

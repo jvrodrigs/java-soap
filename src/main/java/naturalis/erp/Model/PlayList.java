@@ -1,20 +1,22 @@
 package naturalis.erp.Model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
+@Document(collection = "playlists")
 public class PlayList {
 
     @Id
     private String id;
     private String name;
-    private List<User> userList;
+    private String userId;
 
-    public PlayList(String id, String name, List<User> userList) {
+    public PlayList(String id, String name, String userId) {
         this.id = id;
         this.name = name;
-        this.userList = userList;
+        this.userId = userId;
     }
 
     public String getId() {
@@ -33,11 +35,11 @@ public class PlayList {
         this.name = name;
     }
 
-    public List<User> getUserList() {
-        return userList;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUserList(List<User> userList) {
-        this.userList = userList;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 }

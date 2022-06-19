@@ -15,18 +15,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Classe Java de music complex type.
+ * <p>Classe Java de playlist complex type.
  * 
  * <p>O seguinte fragmento do esquema especifica o conteúdo esperado contido dentro desta classe.
  * 
  * <pre>
- * &lt;complexType name="music">
+ * &lt;complexType name="playlist">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="artist" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="userId" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,19 +36,19 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "music", propOrder = {
+@XmlType(name = "playlist", propOrder = {
     "id",
     "name",
-    "artist"
+    "userId"
 })
-public class Music {
+public class Playlist {
 
     @XmlElement(required = true)
     protected String id;
     @XmlElement(required = true)
     protected String name;
     @XmlElement(required = true)
-    protected String artist;
+    protected String userId;
 
     /**
      * Obtém o valor da propriedade id.
@@ -99,27 +99,27 @@ public class Music {
     }
 
     /**
-     * Obtém o valor da propriedade artist.
+     * Obtém o valor da propriedade userId.
      * 
      * @return
      *     possible object is
      *     {@link String }
      *     
      */
-    public String getArtist() {
-        return artist;
+    public String getUserId() {
+        return userId;
     }
 
     /**
-     * Define o valor da propriedade artist.
+     * Define o valor da propriedade userId.
      * 
      * @param value
      *     allowed object is
      *     {@link String }
      *     
      */
-    public void setArtist(String value) {
-        this.artist = value;
+    public void setUserId(String value) {
+        this.userId = value;
     }
 
 }

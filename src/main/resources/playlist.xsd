@@ -2,37 +2,36 @@
            xmlns:tns="http://localhost/teste"
            targetNamespace="http://localhost/teste"
            elementFormDefault="qualified">
-    <xs:complexType name="music">
+    <xs:complexType name="playlist">
         <xs:sequence>
             <xs:element name="id" type="xs:string"/>
             <xs:element name="name" type="xs:string"/>
-            <xs:element name="artist" type="xs:string"/>
+            <xs:element name="userId" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="getMusicsRequest">
+    <xs:element name="getPlayRequest">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="id" type="xs:string"/>
+                <xs:element name="userId" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-    <xs:element name="getMusicsResponse">
+    <xs:element name="getPlaysResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="music" type="tns:music" maxOccurs="unbounded"/>
+                <xs:element name="playlist" type="tns:playlist" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-
-    <xs:element name="getAllMusicsRequest">
+    <xs:element name="getAllPlayRequest">
         <xs:complexType/>
     </xs:element>
-    <xs:element name="getAllMusicsResponse">
+    <xs:element name="getAllPlayResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="music" type="tns:music" maxOccurs="unbounded"/>
+                <xs:element name="playlist" type="tns:playlist" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
