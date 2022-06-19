@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:us="http://localhost/teste">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <us:getPlayByMusicRequest>
+            <us:id>62a27c0e01a8887cd40b01d5</us:id>
+        </us:getPlayByMusicRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

@@ -10,4 +10,7 @@ public interface PlayListRepository extends MongoRepository<PlayList, String> {
 
     @Query("{'userId': ObjectId(?0)}")
     List<PlayList> findByUserId(String id);
+
+    @Query("{'_id':{'$in': ?0}}")
+    List<PlayList> findByMusic(List<String> playlistsIds);
 }

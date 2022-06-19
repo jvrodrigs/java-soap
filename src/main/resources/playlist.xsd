@@ -10,6 +10,22 @@
         </xs:sequence>
     </xs:complexType>
 
+    <xs:element name="getPlayByMusicRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="getPlayByMusicResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="playlist" type="tns:playlist" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
     <xs:element name="getPlayRequest">
         <xs:complexType>
             <xs:sequence>

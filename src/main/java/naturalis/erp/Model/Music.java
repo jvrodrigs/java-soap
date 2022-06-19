@@ -1,6 +1,7 @@
 package naturalis.erp.Model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
@@ -12,13 +13,14 @@ public class Music {
     private String id;
     private String name;
     private String artist;
-    private List<PlayList> playList;
 
-    public Music(String id, String name, String artist, List<PlayList> playList) {
+    private List<String> playlistIds;
+
+    public Music(String id, String name, String artist, List<String> playlistIds) {
         this.id = id;
         this.name = name;
         this.artist = artist;
-        this.playList = playList;
+        this.playlistIds = playlistIds;
     }
 
     public String getId() {
@@ -45,11 +47,11 @@ public class Music {
         this.artist = artist;
     }
 
-    public List<PlayList> getPlayList() {
-        return playList;
+    public List<String> getPlaylistIds() {
+        return playlistIds;
     }
 
-    public void setPlayList(List<PlayList> playList) {
-        this.playList = playList;
+    public void setPlaylistIds(List<String> playlistIds) {
+        this.playlistIds = playlistIds;
     }
 }

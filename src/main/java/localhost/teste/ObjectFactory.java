@@ -2,7 +2,7 @@
 // Este arquivo foi gerado pela Arquitetura JavaTM para Implementação de Referência (JAXB) de Bind XML, v2.2.7 
 // Consulte <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas as modificações neste arquivo serão perdidas após a recompilação do esquema de origem. 
-// Gerado em: 2022.06.19 às 02:20:33 AM GFT 
+// Gerado em: 2022.06.19 às 12:17:51 PM GFT 
 //
 
 
@@ -34,14 +34,6 @@ public class ObjectFactory {
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link GetMusicsRequest }
-     * 
-     */
-    public GetMusicsRequest createGetMusicsRequest() {
-        return new GetMusicsRequest();
     }
 
     /**
@@ -77,6 +69,62 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link GetAllUsersRequest }
+     * 
+     */
+    public GetAllUsersRequest createGetAllUsersRequest() {
+        return new GetAllUsersRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetPlayByMusicRequest }
+     * 
+     */
+    public GetPlayByMusicRequest createGetPlayByMusicRequest() {
+        return new GetPlayByMusicRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetUserRequest }
+     * 
+     */
+    public GetUserRequest createGetUserRequest() {
+        return new GetUserRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllMusicsRequest }
+     * 
+     */
+    public GetAllMusicsRequest createGetAllMusicsRequest() {
+        return new GetAllMusicsRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllMusicsResponse }
+     * 
+     */
+    public GetAllMusicsResponse createGetAllMusicsResponse() {
+        return new GetAllMusicsResponse();
+    }
+
+    /**
+     * Create an instance of {@link Music }
+     * 
+     */
+    public Music createMusic() {
+        return new Music();
+    }
+
+    /**
+     * Create an instance of {@link GetMusicsRequest }
+     * 
+     */
+    public GetMusicsRequest createGetMusicsRequest() {
+        return new GetMusicsRequest();
+    }
+
+    /**
      * Create an instance of {@link GetAllUsersResponse }
      * 
      */
@@ -85,11 +133,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAllUsersRequest }
+     * Create an instance of {@link GetAllMusicByPlayListResponse }
      * 
      */
-    public GetAllUsersRequest createGetAllUsersRequest() {
-        return new GetAllUsersRequest();
+    public GetAllMusicByPlayListResponse createGetAllMusicByPlayListResponse() {
+        return new GetAllMusicByPlayListResponse();
     }
 
     /**
@@ -109,11 +157,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetUserRequest }
+     * Create an instance of {@link GetAllMusicByPlayListRequest }
      * 
      */
-    public GetUserRequest createGetUserRequest() {
-        return new GetUserRequest();
+    public GetAllMusicByPlayListRequest createGetAllMusicByPlayListRequest() {
+        return new GetAllMusicByPlayListRequest();
     }
 
     /**
@@ -133,27 +181,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Music }
+     * Create an instance of {@link GetPlayByMusicResponse }
      * 
      */
-    public Music createMusic() {
-        return new Music();
-    }
-
-    /**
-     * Create an instance of {@link GetAllMusicsRequest }
-     * 
-     */
-    public GetAllMusicsRequest createGetAllMusicsRequest() {
-        return new GetAllMusicsRequest();
-    }
-
-    /**
-     * Create an instance of {@link GetAllMusicsResponse }
-     * 
-     */
-    public GetAllMusicsResponse createGetAllMusicsResponse() {
-        return new GetAllMusicsResponse();
+    public GetPlayByMusicResponse createGetPlayByMusicResponse() {
+        return new GetPlayByMusicResponse();
     }
 
 }

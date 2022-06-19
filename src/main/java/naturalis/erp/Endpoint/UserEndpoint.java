@@ -97,7 +97,39 @@ public class UserEndpoint {
         return response;
     }
 
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getPlayByMusicRequest")
+    @ResponsePayload
+    public GetPlayByMusicResponse getPlayByMusicResponse(@RequestPayload GetPlayByMusicRequest request){
+        GetPlayByMusicResponse response = new GetPlayByMusicResponse();
+        List<Playlist> play = new ArrayList<>();
+        var music = playListService.getPlayListsByMusic(request.getId());
 
+        music.forEach(m -> {
+            Playlist pp = new Playlist();
+            BeanUtils.copyProperties(m, pp);
+            play.add(pp);
+        });
+
+        response.getPlaylist().addAll(play);
+        return response;
+    }
+
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getAllMusicByPlayListRequest")
+    @ResponsePayload
+    public GetAllMusicByPlayListResponse getAllMusicByPlayListResponse(@RequestPayload GetAllMusicByPlayListRequest request){
+        GetAllMusicByPlayListResponse response = new GetAllMusicByPlayListResponse();
+        List<Music> musics = new ArrayList<>();
+        var playlistId = musicService.getAllMusicsByPlayList(request.getId());
+
+        playlistId.forEach(p -> {
+            Music ms = new Music();
+            BeanUtils.copyProperties(p, ms);
+            musics.add(ms);
+        });
+
+        response.getMusic().addAll(musics);
+        return response;
+    }
 //    @PayloadRoot(namespace = "http://localhost/teste", localPart = "getUserRequest")
 //    @ResponsePayload
 //    public GetUserResponse getUserResponse(@RequestPayload GetUserRequest request){
